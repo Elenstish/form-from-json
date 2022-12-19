@@ -1,7 +1,36 @@
 # JsonForm
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
-use JSON file from json-schema folder for input in first tab
+
+Install all dependencies use npm install
+
+You can input JSON schema in the first tab from form-data.json file or load this file. 
+
+You can load only json or text  file.
+
+If you want to add a custom JSON schema it must be an array of object
+
+
+    id: number; // should be unique
+    label: string;
+    name: string;  // camelCase format
+    inputType: string; // when type key is ‘input’ it can be text, number, 
+               // email, color, url, password, search or tel 
+               // system will validate input by this value in the second form
+               // otherwise it can be empty “”
+    type: string; // input, radio, textarea, checkbox, textEditor
+    value: string; // validate value for inputType in string format
+
+All fields in the form are not required
+
+When you switch to the second tab your data in the inputs are reset
+
+The data in the second form will submit only when you change it.
+
+When you submit changes in the second form, the data will be saved 
+even if you switch to the first tab. 
+The data will be changed when you input or load JSON schema in the first tab.
+
 
 ## Development server
 

@@ -1,0 +1,30 @@
+<section class="section">
+  <h2>Json Form Schema</h2>
+  <p>You can input or upload array of data in json format</p>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Add data in json format</mat-label>
+      <textarea matInput
+                [formControl]="jsonFileControl"
+                cdkTextareaAutosize
+                cdkAutosizeMinRows="5"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <label for="file">or load json or txt file</label>
+    <button type="button" mat-raised-button class="file-button"
+            (click)="fileInput.click()">
+      Choose File
+    </button>
+    <input hidden accept="application/json, text/plain" #fileInput type="file" id="file"
+           (change)="handleFileInput($event)">
+  </div>
+
+  <button type="button" mat-flat-button color="primary" class="submit-button"
+          (click)="submitForm()">
+    Submit
+  </button>
+
+</section>

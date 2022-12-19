@@ -20,7 +20,7 @@
             "allowedCommonJsDependencies": [
               "@ckeditor/ckeditor5-build-classic"
             ],
-            "outputPath": "dist/json-form",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -102,6 +102,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

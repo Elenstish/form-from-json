@@ -49,16 +49,16 @@ export class JsonFormStoreService {
 
   public setJsonFromInput(data: FileContent): void {
 	let newDate: BaseType[] = JsonFormStoreService.getData(data as string);
-	this.store.dispatch(inputJsonData(({ payload: newDate })));
+	this.store.dispatch(inputJsonData({ payload: newDate }));
   }
 
   public setJsonFromFile(data: FileContent): void {
 	let newDate: BaseType[] = JsonFormStoreService.getData(data as string);
-	this.store.dispatch(loadJsonData(({ payload: newDate })));
+	this.store.dispatch(loadJsonData({ payload: newDate }));
   }
 
   public setForm(data: BaseType[]): void {
-	this.store.dispatch(loadForm(({ payload: data })));
+	this.store.dispatch(loadForm({ payload: data }));
   }
 
   public selectJsonFromFile$(): Observable<BaseType[]> {

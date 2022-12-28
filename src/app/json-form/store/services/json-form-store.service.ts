@@ -69,7 +69,7 @@ export class JsonFormStoreService {
 	this.snackBar.open(
 	  text,
 	  'x',
-	  { duration: 5000, panelClass: 'red-snackbar' }
+	  { duration: 5000 }
 	);
   }
 }
